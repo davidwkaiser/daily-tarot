@@ -1,4 +1,4 @@
-**Daily Tarot App**
+**DAILY TAROT APP**
 
 Every Day, I draw a Tarot card for inspiration and guidance. Now I am building an app to automate the process. 
 
