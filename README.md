@@ -8,7 +8,7 @@ This app is currently running on a local host.
 
 Upgrades to this include:  
 -Add all 78 cards  
--Allow for the possibility of inverted cards  
+-Allow for the possibility of inverted cards [DONE!]  
 -Add JPGs  
 -Deploy  
 -Add key words for the card  
