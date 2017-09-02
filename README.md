@@ -7,7 +7,7 @@ Right now, this toy app can select one of four possible cards at random, and tel
 This app is currently running on a local host. 
 
 Upgrades to this include:  
--Add all 78 cards  
+-Add all 78 cards [currently includes all Major Arcana]  
 -Allow for the possibility of inverted cards [DONE!]  
 -Add JPGs  
 -Deploy  
