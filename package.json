@@ -1,0 +1,26 @@
+{
+  "name": "daily-tarot",
+  "version": "1.0.0",
+  "description": "An App to generate a Tarot card each day for growth and guidance",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidwkaiser/daily-tarot.git"
+  },
+  "keywords": [
+    "tarot",
+    "node",
+    "express",
+    "react",
+    "mail"
+  ],
+  "author": "David Kaiser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidwkaiser/daily-tarot/issues"
+  },
+  "homepage": "https://github.com/davidwkaiser/daily-tarot#readme"
+}
