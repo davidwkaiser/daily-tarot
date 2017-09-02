@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/davidwkaiser/daily-tarot/issues"
   },
-  "homepage": "https://github.com/davidwkaiser/daily-tarot#readme"
+  "homepage": "https://github.com/davidwkaiser/daily-tarot#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "nodemon": "^1.11.0"
+  }
 }
