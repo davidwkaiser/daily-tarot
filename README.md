@@ -15,6 +15,6 @@ Upgrades to this include:
 -Run as a cron job daily
 -Mail the card to the user in a nicely formatted HTML email, automatically
 
-See my portfolio at http://davidwkaiser.squarespace.com
-See my LinkedIn at http://linkedin.com/in/davidwkaiser
-And, well, you've already found my GitHub...
+See my portfolio at http://davidwkaiser.squarespace.com  
+See my LinkedIn at http://linkedin.com/in/davidwkaiser  
+And, well, you've already found my GitHub...  
