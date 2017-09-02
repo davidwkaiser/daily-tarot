@@ -7,11 +7,20 @@ const data = require('./data')
 let cards = data.cards
 
 app.get('/', function(req, res){
-  res.render('index', {card: cards[randomNumber()]})
+  res.render('index', {
+    status: {
+      card: cards[randomNumber()],
+      direction: inverted()
+    }
+  })
 })
 
 function randomNumber(){
   return Math.floor(Math.random()*cards.length)
+}
+
+function inverted(){
+  return Math.floor(Math.random()*2) === 1 ? "" : ", inverted"
 }
 
 
