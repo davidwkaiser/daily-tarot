@@ -34,5 +34,19 @@ exports.cards = [
   "Page of Wands",
   "Knight of Wands",
   "Queen of Wands",
-  "King of Wands"
+  "King of Wands",
+  "Ace of Cups",
+  "Tow of Cups",
+  "Three of Cups",
+  "Four of Cups",
+  "Five of Cups",
+  "Six of Cups",
+  "Seven of Cups",
+  "Eight of Cups",
+  "Nine of Cups",
+  "Ten of Cups",
+  "Page of Cups",
+  "Knight of Cups",
+  "Queen of Cups",
+  "King of Cups"
 ]
