@@ -20,5 +20,19 @@ exports.cards = [
   "The Moon",
   "The Sun",
   "Judgement",
-  "The World"
+  "The World",
+  "Ace of Wands",
+  "Two of Wands",
+  "Three of Wands",
+  "Four of Wands",
+  "Five of Wands",
+  "Six of Wands",
+  "Seven of Wands",
+  "Eight of Wands",
+  "Nine of Wands",
+  "Ten of Wands",
+  "Page of Wands",
+  "Knight of Wands",
+  "Queen of Wands",
+  "King of Wands"
 ]
