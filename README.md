@@ -10,7 +10,7 @@ Upgrades to this include:
 -Add all 78 cards [currently includes all Major Arcana, Wands and Cups]  
 -Allow for the possibility of inverted cards [DONE!]  
 -Add JPGs  
--Deploy  
+-Deploy  [DONE, you can see it here: https://daily-tarot.herokuapp.com]  
 -Add key words for the card  
 -Run as a cron job daily  
 -Mail the card to the user in a nicely formatted HTML email, automatically  
