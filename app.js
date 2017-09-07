@@ -8,9 +8,10 @@ const data = require('./data')
 let cards = data.cards
 
 app.get('/', function(req, res){
+  let cardPulled = randomNumber()
   res.render('index', {
     status: {
-      card: cards[randomNumber()],
+      card: cards[cardPulled],
       direction: inverted()
     }
   })

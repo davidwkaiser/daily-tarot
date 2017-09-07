@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="eng">
 <head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<p>Your card is <%=status.card+status.direction%>!</p>
+<p>Your card is <%=status.card.name+status.direction%>!</p>
+<img class="card" src=<%=status.card.image%> >
 <br>
 <br>
 <br>
 <p>I use the Waite-Smith Tarot Deck: </p>
-<img src="rider_waite.jpg" style="width:250px; height:183px">
+<img class="deck" src="rider_waite.jpg">
 </body>
