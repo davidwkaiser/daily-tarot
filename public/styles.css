@@ -1,9 +1,9 @@
-.card {
+#card {
   width: 10%;
   height: auto;
 }
 
-.deck{
+#deck{
   width:15%;
   height:auto;
 }
