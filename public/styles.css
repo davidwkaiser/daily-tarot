@@ -1,11 +1,11 @@
-img.card {
-  height: 25%;
-  width: 25%;
+.card {
+  width: 10%;
+  height: auto;
 }
 
-img.deck{
-  height:50%;
-  width:50%;
+.deck{
+  width:15%;
+  height:auto;
 }
 /*p {
   color: red;
