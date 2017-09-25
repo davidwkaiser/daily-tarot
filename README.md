@@ -4,7 +4,7 @@ Every Day, I draw a Tarot card for inspiration and guidance. Now I am building a
 
 Right now, this toy app can select one of four possible cards at random, and tell you which the name of the card. Pretty straightforward. 
 
-This app is currently running on a local host. 
+Tech stack: Node.JS, Express, Nodemon, EJS
 
 Upgrades to this include:  
 -Add all 78 cards [DONE]  
