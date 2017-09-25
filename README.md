@@ -7,11 +7,11 @@ Right now, this toy app can select one of four possible cards at random, and tel
 This app is currently running on a local host. 
 
 Upgrades to this include:  
--Add all 78 cards [currently includes all Major Arcana, Wands and Cups]  
--Allow for the possibility of inverted cards [DONE!]  
+-Add all 78 cards [DONE]  
+-Allow for the possibility of inverted cards [DONE, with graphics, too!]  
 -Add JPGs  [DONE]  
 -Deploy  [DONE, you can see it here: https://daily-tarot.herokuapp.com]  
--Add key words for the card  
+-Add key words for the card [started] 
 -Run as a cron job daily  
 -Mail the card to the user in a nicely formatted HTML email, automatically  
 
