@@ -4,17 +4,19 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<p>Your card is <%=status.card.name+status.direction%>!</p>
-<img id="card" src=<%=status.card.image%> >
+<p id="cardText">Your card is <%=status.card.name+status.directionText%>!</p>
+<img id="card" src=<%=status.card.image%> style="transform: rotate(180deg)" >
+
 <br>
 <br>
 <br>
 <p>I use the Waite-Smith Tarot Deck: </p>
 <img id="deck" src="rider_waite.jpg">
 </body>
-
-<!--
-style="transform: rotate(180deg)"
-<%= status.direction===', inverted'? "transform: rotate(180deg)": ""%>
-
- -->
+<script>
+  var cardText = document.getElementById("cardText").innerText
+  var image = document.getElementById("card")
+  if (!cardText.includes("inverted")) {
+    image.setAttribute("style", "")
+}
+</script>
