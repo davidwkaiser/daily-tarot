@@ -11,7 +11,7 @@ Upgrades to this include:
 -Allow for the possibility of inverted cards [DONE, with graphics, too!]  
 -Add JPGs  [DONE]  
 -Deploy  [DONE, you can see it here: https://daily-tarot.herokuapp.com]  
--Add key words for the card [started] 
+-Add key words for the card [started]  
 -Run as a cron job daily  
 -Mail the card to the user in a nicely formatted HTML email, automatically  
 
