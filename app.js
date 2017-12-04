@@ -11,7 +11,7 @@ app.get('/', function(req, res){
   let cardPulled = randomNumber()
   var direction = inverted()
   var additionalText = directionText(direction)
-  // var style = setStyle(direction)
+(direction)
   res.render('index', {
     status: {
       card: cards[cardPulled],
@@ -32,10 +32,6 @@ function inverted(){
 function directionText(direction){
   return direction === 0 ? "" : ", inverted"
 }
-
-// function setStyle(direction){
-//   return direction === 0 ? "" : "transform: rotate(180deg)"
-// }
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("app listening on port 3000!")
