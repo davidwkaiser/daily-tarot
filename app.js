@@ -11,7 +11,6 @@ app.get('/', function(req, res){
   let cardPulled = randomNumber()
   var direction = inverted()
   var additionalText = directionText(direction)
-(direction)
   res.render('index', {
     status: {
       card: cards[cardPulled],
