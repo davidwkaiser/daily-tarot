@@ -16,6 +16,6 @@ Upgrades to this include:
 -Run as a cron job daily  
 -Make it pretty (add styling)  
 
-See my portfolio at http://davidwkaiser.squarespace.com
-See my LinkedIn at http://linkedin.com/in/davidwkaiser
-And, well, you've already found my GitHub...
+See my portfolio at http://davidwkaiser.squarespace.com  
+See my LinkedIn at http://linkedin.com/in/davidwkaiser  
+And, well, you've already found my GitHub...  
