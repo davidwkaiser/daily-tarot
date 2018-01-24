@@ -4,19 +4,25 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<p id="cardText">Your card is <%=status.card.name+status.directionText%>!</p>
-<img id="card" src=<%=status.card.image%> style="" >
+  <div>
+    <p id="cardText">Your card is <%=status.card.name+status.directionText%>!</p>
+    <img id="card" src=<%=status.card.image%> style="float:left" >
+    <% for(var i=0; i<status.card.keywords.length; i++) { %>
+      <p> <%= status.card.keywords[i] %></p>
+    <% } %>
+  </div>
+<br>
 
-<br>
-<br>
-<br>
-<p>I use the Waite-Smith Tarot Deck: </p>
-<img id="deck" src="rider_waite.jpg">
+<div style="clear:both">
+  <br>
+  <p>I use the Waite-Smith Tarot Deck: </p>
+  <img id="deck" src="rider_waite.jpg">
+</div>
 </body>
 <script>
   var cardText = document.getElementById("cardText").innerText
   var image = document.getElementById("card")
   if (cardText.includes("inverted")) {
-    image.setAttribute("style", "transform: rotate(180deg)")
+    image.setAttribute("style", "float:left; transform: rotate(180deg)")
 }
 </script>
