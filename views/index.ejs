@@ -5,7 +5,7 @@
 </head>
 <body>
   <div>
-    <p id="cardText">Your card is <%=status.card.name+status.directionText%>!</p>
+    <p id="cardText">Your card is <%=status.card.name+status.text%>!</p>
     <img id="card" src=<%=status.card.image%> style="float:left" >
     <% for(var i=0; i<status.card.keywords.length; i++) { %>
       <p> <%= status.card.keywords[i] %></p>

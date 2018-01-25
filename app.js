@@ -10,12 +10,12 @@ let cards = data.cards
 app.get('/', function(req, res){
   let cardPulled = randomNumber()
   var direction = inverted()
-  var additionalText = directionText(direction)
+  var text = directionText(direction)
   res.render('index', {
     status: {
       card: cards[cardPulled],
       direction: direction,
-      directionText: additionalText
+      text: text
     }
   })
 })
