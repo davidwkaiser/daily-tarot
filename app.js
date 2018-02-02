@@ -20,6 +20,12 @@ app.get('/', function(req, res){
   })
 })
 
+app.get('/mail', function(req, res){
+  console.log("I just mailed something!");
+  //add mailer test script here
+  res.redirect('/');
+})
+
 function randomNumber(){
   return Math.floor(Math.random()*cards.length)
 }
