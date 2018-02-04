@@ -30,6 +30,7 @@
   "dependencies": {
     "ejs": "^2.5.7",
     "express": "^4.15.4",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "sendgrid": "^4.2.0"
   }
 }
