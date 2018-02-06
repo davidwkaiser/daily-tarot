@@ -23,6 +23,7 @@ app.get('/', function(req, res){
 app.get('/mail', function(req, res){
   console.log("I just mailed something!");
   //add mailer test script here
+  //sendgrid is installed, ready to test
   res.redirect('/');
 })
 
