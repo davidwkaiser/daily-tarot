@@ -12,7 +12,7 @@ Upgrades to this include:
 -Add JPGs  [DONE]  
 -Deploy  [DONE, you can see it here: https://daily-tarot.herokuapp.com]  
 -Add key words for the card [DONE]  
--Mail the card to the user in a nicely formatted HTML email, automatically [IN PROGRESS]  
+-Mail the card to the user in a nicely formatted HTML email, automatically [IN PROGRESS, AT PROOF OF CONCEPT STAGE]    
 -Run as a cron job daily  
 -Make it pretty (add styling)  
 
