@@ -5,8 +5,8 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
 const data = require('./data')
-// const mailer = require('./mailer')
-require('./mailer')
+const mailer = require('./mailer')
+// require('./mailer')
 let cards = data.cards
 
 app.get('/', function(req, res){

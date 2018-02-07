@@ -12,7 +12,7 @@ var request = sg.emptyRequest({
   body: mail.toJSON(),
 });
 
-function sendMail(){
+exports.sendMail = function (){
   sg.API(request, function(error, response) {
     console.log(response.statusCode);
     console.log(response.body);
