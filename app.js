@@ -23,7 +23,7 @@ app.get('/', function(req, res){
 
 app.get('/mail', function(req, res){
   console.log("I just mailed something!");
-  mailer.sendMail();
+  sendMail();
   res.redirect('/');
 })
 
