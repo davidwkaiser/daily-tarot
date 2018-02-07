@@ -5,6 +5,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
 const data = require('./data')
+const mailer = require('./mailer')
 let cards = data.cards
 
 app.get('/', function(req, res){
@@ -22,8 +23,7 @@ app.get('/', function(req, res){
 
 app.get('/mail', function(req, res){
   console.log("I just mailed something!");
-  //add mailer test script here
-  //sendgrid is installed, ready to test
+  mailer.sendMail();
   res.redirect('/');
 })
 
