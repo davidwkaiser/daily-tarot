@@ -1,10 +1,8 @@
 **DAILY TAROT APP**
 
-Every Day, I draw a Tarot card for inspiration and guidance. Now I am building an app to automate the process.  
+Every day, I draw a Tarot card for inspiration and guidance. Now I am building an app to automate the process.  
 
-Right now, this toy app can select one of four possible cards at random, and tell you which the name of the card. Pretty straightforward.  
-
-Tech stack: Node.JS, Express, Nodemon, EJS  
+At first, this toy app could select one of four possible cards at random, and tell you which the name of the card. Pretty straightforward.  
 
 Upgrades to this include:  
 -Add all 78 cards [DONE]  
@@ -15,6 +13,8 @@ Upgrades to this include:
 -Mail the card to the user in a nicely formatted HTML email, automatically [IN PROGRESS, AT PROOF OF CONCEPT STAGE]    
 -Run as a cron job daily  
 -Make it pretty (add styling)  
+
+Tech stack: Node.JS, Express, Nodemon, EJS   
 
 See my portfolio at http://davidwkaiser.squarespace.com  
 See my LinkedIn at http://linkedin.com/in/davidwkaiser  
