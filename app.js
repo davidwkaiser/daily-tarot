@@ -13,20 +13,22 @@ app.get('/', function(req, res){
   let cardPulled = randomNumber()
   var direction = inverted()
   var text = directionText(direction)
-  res.render('index', {
-    status: {
+  var output = {
       card: cards[cardPulled],
       direction: direction,
       text: text
     }
+  res.render('index', {
+    status: output
   })
+  mailer.sendMail(output);
 })
 
-app.get('/mail', function(req, res){
-  console.log("I just mailed something!");
-  mailer.sendMail();
-  res.redirect('/');
-})
+// app.get('/mail', function(req, res){
+//   console.log("I just mailed something!");
+//   mailer.sendMail();
+//   res.redirect('/');
+// })
 
 function randomNumber(){
   return Math.floor(Math.random()*cards.length)
