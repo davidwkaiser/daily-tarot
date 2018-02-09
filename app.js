@@ -24,12 +24,6 @@ app.get('/', function(req, res){
   mailer.sendMail(output);
 })
 
-// app.get('/mail', function(req, res){
-//   console.log("I just mailed something!");
-//   mailer.sendMail();
-//   res.redirect('/');
-// })
-
 function randomNumber(){
   return Math.floor(Math.random()*cards.length)
 }

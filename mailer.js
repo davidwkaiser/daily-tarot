@@ -1,3 +1,7 @@
+//this needs to be refactored, probably put in a method
+//that creates these variables and passes
+//them to the request inside sendMail
+
 var helper = require('sendgrid').mail;
 var from_email = new helper.Email('davidwkaiser@gmail.com');
 var to_email = new helper.Email('davidwkaiser@yahoo.com');
