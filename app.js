@@ -9,7 +9,7 @@ const mailer = require('./mailer')
 // require('./mailer')
 let cards = data.cards
 
-app.get('/', function(req, res){
+app.get('/*', function(req, res){
   let cardPulled = randomNumber()
   var direction = inverted()
   var text = directionText(direction)
