@@ -18,7 +18,7 @@ app.get('/*', function(req, res){
       direction: direction,
       text: text
     }
-  console.log("in app.js, output is: "+output.toString())
+  console.log("in app.js, output just before render is: "+JSON.stringify(output))
   res.render('index', {
     status: output
   })
@@ -38,5 +38,5 @@ function directionText(direction){
 }
 
 app.listen(process.env.PORT || 3000, function(){
-  console.log("app listening on port 3000!")
+  console.log("app listening on port 3000 locally or process.env.PORT at Heroku!")
 })
