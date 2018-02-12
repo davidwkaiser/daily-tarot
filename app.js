@@ -9,7 +9,7 @@ const mailer = require('./mailer')
 // require('./mailer')
 let cards = data.cards
 
-app.get('/*', function(req, res){
+app.get('/', function(req, res){
   let cardPulled = randomNumber()
   var direction = inverted()
   var text = directionText(direction)
@@ -18,7 +18,7 @@ app.get('/*', function(req, res){
       direction: direction,
       text: text
     }
-  console.log("in app.js, output just before render is: "+JSON.stringify(output))
+  // console.log("in app.js, output just before render is: "+JSON.stringify(output))
   res.render('index', {
     status: output
   })

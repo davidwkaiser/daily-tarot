@@ -10,15 +10,15 @@ exports.sendMail = function (output){
 }
 
 function setRequest(output){
-    console.log("in mailer.js, output is: "+JSON.stringify(output))
+    // console.log("in mailer.js, output is: "+JSON.stringify(output))
   var helper = require('sendgrid').mail;
   var from_email = new helper.Email('davidwkaiser@gmail.com');
   var to_email = new helper.Email('davidwkaiser@yahoo.com');
   var subject = 'Your Daily Tarot Card!';
   var content = new helper.Content('text/plain',
     'Your card is '
-    + output.card
-    + output.txt + "!")
+    + output.card.name
+    + output.text + "!")
   var mail = new helper.Mail(from_email, subject, to_email, content);
 
   var completedRequest = sg.emptyRequest({
