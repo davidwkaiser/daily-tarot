@@ -18,7 +18,7 @@ app.get('/*', function(req, res){
       direction: direction,
       text: text
     }
-  console.log("in app.js, output is: "+output)
+  console.log("in app.js, output is: "+output.toString())
   res.render('index', {
     status: output
   })

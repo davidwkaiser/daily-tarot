@@ -10,7 +10,7 @@ exports.sendMail = function (output){
 }
 
 function setRequest(output){
-    console.log("in mailer.js, output is: "+output)
+    console.log("in mailer.js, output is: "+output.toString())
   var helper = require('sendgrid').mail;
   var from_email = new helper.Email('davidwkaiser@gmail.com');
   var to_email = new helper.Email('davidwkaiser@yahoo.com');
