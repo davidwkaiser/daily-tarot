@@ -15,7 +15,7 @@ Upgrades to this include:
 -Run as a cron job daily  
 -Make it pretty (add styling)  
 
-Tech stack: Node.JS, Express, Nodemon, EJS   
+Tech stack: Node.JS, Express, Nodemon, EJS, Heroku      
 
 See my portfolio at http://davidwkaiser.squarespace.com  
 See my LinkedIn at http://linkedin.com/in/davidwkaiser  
