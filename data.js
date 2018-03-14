@@ -53,7 +53,7 @@ exports.cards = [
   {name:"Two of Swords", image: "swords02.jpg", keywords: ["Feeling Blocked", "Willful Blindness"]},
   {name:"Three of Swords", image: "swords03.jpg", keywords: ["Loneliness", "Heartbreak", "Abandonment", "Betrayal"]},
   {name:"Four of Swords", image: "swords04.jpg", keywords: ["Rest", "Preparation", "The Calm Before the Storm"]},
-  {name:"Five of Swords", image: "swords05.jpg", keywords: ["Conflict", "Self-Interest", "Loss of COnnection"]},
+  {name:"Five of Swords", image: "swords05.jpg", keywords: ["Conflict", "Self-Interest", "Loss of Connection"]},
   {name:"Six of Swords", image: "swords06.jpg", keywords: ["Moving On", "Escape", "Seeking Refuge"]},
   {name:"Seven of Swords", image: "swords07.jpg", keywords: ["Running Away", "Breaking Rules", "Theft"]},
   {name:"Eight of Swords", image: "swords08.jpg", keywords: ["Captivity", "Bound", "Stuck"]},
