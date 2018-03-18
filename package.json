@@ -20,7 +20,10 @@
     "node",
     "express",
     "react",
-    "mail"
+    "mail",
+    "jasmine",
+    "heroku",
+    "sendgrid"
   ],
   "author": "David Kaiser",
   "license": "ISC",

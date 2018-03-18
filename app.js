@@ -1,5 +1,6 @@
 const express = require('express')
 const app=express()
+const fn = require('./functions')
 app.use(express.static(__dirname + '/public'))
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
@@ -9,9 +10,9 @@ const mailer = require('./mailer')
 let cards = data.cards
 
 app.get('/', function(req, res){
-  let cardPulled = randomNumber(cards.length)
-  var direction = inverted()
-  var text = directionText(direction)
+  let cardPulled = fn.randomNumber(cards.length)
+  var direction = fn.inverted()
+  var text = fn.directionText(direction)
   var output = {
       card: cards[cardPulled],
       direction: direction,
@@ -22,18 +23,6 @@ app.get('/', function(req, res){
   })
   mailer.sendMail(output);
 })
-
-function randomNumber(number){
-  return Math.floor(Math.random()*number)
-}
-
-function inverted(){
-  return Math.floor(Math.random()*2) === 1 ? 0 : 1
-}
-
-function directionText(direction){
-  return direction === 0 ? "" : ", inverted"
-}
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("app listening on port 3000 locally or process.env.PORT at Heroku!")
