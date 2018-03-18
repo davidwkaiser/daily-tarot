@@ -5,9 +5,10 @@
   "main": "app.js",
   "engines": {
     "node": "6.10.1"
-    },
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-init": "./node_modules/jasmine/bin/jasmine.js init",
+    "test": "./node_modules/jasmine/bin/jasmine.js",
     "start": "node app.js"
   },
   "repository": {
@@ -32,5 +33,8 @@
     "express": "^4.15.4",
     "nodemon": "^1.11.0",
     "sendgrid": "^4.2.0"
+  },
+  "devDependencies": {
+    "jasmine": "^3.1.0"
   }
 }

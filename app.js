@@ -6,7 +6,6 @@ app.use(express.static('public'))
 
 const data = require('./data')
 const mailer = require('./mailer')
-// require('./mailer')
 let cards = data.cards
 
 app.get('/', function(req, res){
@@ -39,3 +38,5 @@ function directionText(direction){
 app.listen(process.env.PORT || 3000, function(){
   console.log("app listening on port 3000 locally or process.env.PORT at Heroku!")
 })
+
+module.exports = app;
