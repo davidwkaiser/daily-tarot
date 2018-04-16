@@ -1,3 +1,7 @@
 # This is a rakefile
-# It has no tasks
 
+task :default => [:boot]
+
+task :boot do
+  puts "hey we're started!"
+end
