@@ -1,0 +1,12 @@
+language: node_js - 6.11.3
+install: npm install
+branches:
+  only:
+  - master
+deploy:
+  provider: heroku
+  api_key:
+    secure: Ix/0xKJuNpDrdKTya2eAPTsZDqlaYP+HK2ci3pgo7S+M9AGUTF1605yVDZOfBKsHCewse6+SjIhJL4XKfRe+7E5VP22RfUCiVM+ZT6FgdZ5yZN/KKn+61ovxHHtUub0glSgNCKquKLUIYlyuSGiJEFH3LYfkFWNeESsGAdgti7SvFr3tBAJTbqD/dj3gqtf9TmCrz8uSITOtyarixvQypiZPePWAHWx816dC/lLu5BPtcAZkpjVSvceCzigYP6V0PS6NUv9ZItoGZCkxIoI1y6o+IggHK3DVN9MxlzdtBnV3gZuSmqaOu61xoMITn4MahTsDfbzv702Wvwcqb0rL09gjdSviRHiiXjtFRKsSXI1nXm86wweNTOPJ2H6SVlimQsNJqwbVy9sIlvgNKRi0ZtLNKNtJlZbw/qhyi0FvHVAty35gHNO7awN9k+NRihouVS4iU3GUJHHK8Jef3N43DmQ6qicW9vc0+b1P5I9uXAMUq3+OpoA1NdUxaKKWTyR9hglu4o4vItDzGZvvpFx30Lahs80Xfia9+jH5UVS7jvi8N1vw0WeddBi3TpwDtWCT5+wd8kiiNEfSgqCybbZ2Dc2Q3S6zHJ6C1Jepsqrjn4drZL6gKoAiJ0/bhiFv/G4JFuWbB4ih55OCwDhXy3A5a0pTsNU5cZUtPBwLe46jnFk=
+  app: daily-tarot-staging
+  on:
+    repo: davidwkaiser/daily-tarot
