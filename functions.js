@@ -1,6 +1,7 @@
 var functions = {
   "randomNumber": function(number){
-    return Math.floor(Math.random()*number);
+    // return Math.floor(Math.random()*number);
+    return 10
     },
   "inverted": function(){
   return Math.floor(Math.random()*2) === 1 ? 0 : 1
