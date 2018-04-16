@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test-init": "./node_modules/jasmine/bin/jasmine.js init",
-    "test": "./node_modules/jasmine/bin/jasmine.js",
+    "test": "jasmine",
     "start": "node app.js"
   },
   "repository": {
