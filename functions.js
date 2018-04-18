@@ -11,12 +11,3 @@ var functions = {
 }
 
 module.exports = functions;
-
-
-
-
-// var randomNumber = (number) => {
-//   return Math.floor(Math.random()*number);
-// }
-
-// module.exports = randomNumber;
