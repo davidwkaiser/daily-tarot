@@ -1,17 +1,29 @@
-// describe('App File', function () {
+var Request = require("request");
 
-//   it('randomNumber returns an integer in the range', function() {
-//     var max = 5;
-//     var number = randomNumber(max);
-//     expect(number).toEqual(jasmine.any(Number));
-//     expect(number).toBeLessThan(max)
-//   });
+describe("Server", ()=> {
+  var server;
+  beforeAll(()=> {
+    server = require("../app");
+  });
+  afterAll(()=> {
+    // server.close();
+  });
 
-//   it('handles inverted status', function(){
-//     var text0 = directionText(0);
-//     var text1 = directionText(1);
-//     expect(text0).toEqual("");
-//     expect(text1).toEqual(", inverted");
-//   });
-
-// });
+  describe("Get /", ()=> {
+    var data = {};
+    beforeAll((done) =>{
+      Request.get("http://localhost:3000/", (error, response, body) =>{
+        data.status = response.statusCode;
+        data.body = body;
+        done();
+      });
+    });
+    it("Status 200", ()=> {
+      expect(data.status).toBe(200);
+    });
+    it("Body", ()=> {
+      expect(data.body).toContain("Your card is");
+      expect(data.body).toMatch(/Waite-Smith/);
+    });
+  });
+})
