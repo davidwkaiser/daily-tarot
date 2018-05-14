@@ -12,7 +12,7 @@ Upgrades to this include:
 -Add key words for the card [DONE]
 -Mail the card to the user in a nicely formatted HTML email, automatically [IN PROGRESS, AT PROOF OF CONCEPT STAGE, NEEDS WORK TO MAIL DATA]
 -Add a continuous deployment pipeline [IN PROGRESS]
--Add tests [IN PROGRESS]
+-Add tests [IN PROGRESS, ADDITIONAL TESTS RECENTLY ADDED]
 -Run as a cron job daily
 -Make it pretty (add styling)
 
