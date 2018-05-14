@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="eng">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <title>Daily Tarot Card</title>
 </head>
 <body>
+  <div class="text big">
+    <p id="cardText">Your card is <%=status.card.name+status.text%>...</p>
+  </div>
   <div>
-    <p id="cardText">Your card is <%=status.card.name+status.text%>!</p>
-    <img id="card" src=<%=status.card.image%> style="float:left" >
-    <% for(var i=0; i<status.card.keywords.length; i++) { %>
+    <img id="card" src=<%=status.card.image%> >
+  </div>
+  <div class="text medium">
+      <% for(var i=0; i<status.card.keywords.length; i++) { %>
       <p> <%= status.card.keywords[i] %></p>
     <% } %>
   </div>
 <br>
 
-<div style="clear:both">
+<!-- <div style="clear:both">
   <br>
   <p>I use the Waite-Smith Tarot Deck: </p>
   <img id="deck" src="rider_waite.jpg">
-</div>
+</div> -->
 </body>
 <script>
   var cardText = document.getElementById("cardText").innerText
   var image = document.getElementById("card")
   if (cardText.includes("inverted")) {
-    image.setAttribute("style", "float:left; transform: rotate(180deg)")
+    image.setAttribute("style", "transform: rotate(180deg)")
 }
 </script>
