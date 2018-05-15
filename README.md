@@ -4,8 +4,8 @@ Every day, I draw a Tarot card for inspiration and guidance. Now I am building a
 
 At first, this toy app could select one of four possible cards at random, and tell you which the name of the card. Pretty straightforward.
 
-Upgrades to this include:<br?>
--Add all 78 cards [DONE]<br/>  
+Upgrades to this include:<br/>
+-Add all 78 cards [DONE]<br/>
 -Allow for the possibility of inverted cards [DONE, with graphics, too!]<br/>
 -Add JPGs  [DONE]<br/>
 -Deploy  [DONE, you can see it here: https://daily-tarot.herokuapp.com]<br/>
