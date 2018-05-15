@@ -15,6 +15,7 @@ Upgrades to this include:<br/>
 -Add tests [IN PROGRESS, ADDITIONAL TESTS RECENTLY ADDED]<br/>
 -Run as a cron job daily<br/>
 -Make it pretty / add styling [IN PROGRESS]<br/>
+-Add metadata for SEO<br/>
 
 
 Tech stack: Node.JS, Express, Nodemon, EJS, Jasmine, Heroku<br/>
