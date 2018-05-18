@@ -16,6 +16,7 @@ Upgrades to this include:<br/>
 -Run as a cron job daily<br/>
 -Make it pretty / add styling [IN PROGRESS]<br/>
 -Add metadata for SEO [DONE]<br/>
+-Modify view to adapt to mobile vs desktop<br/>
 
 
 Tech stack: Node.JS, Express, Nodemon, EJS, Jasmine, Heroku<br/>
