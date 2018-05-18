@@ -4,6 +4,8 @@ describe("Server", ()=> {
   var server;
   beforeAll(()=> {
     server = require("../app");
+    mailer = require("../mailer")
+    spyOn(mailer, 'sendMail').and.callThrough();
   });
   afterAll(()=> {
     // server.close();
@@ -23,7 +25,11 @@ describe("Server", ()=> {
     });
     it("Body", ()=> {
       expect(data.body).toContain("Your card is");
-      expect(data.body).toMatch(/Waite-Smith/);
+      expect(data.body).toMatch(/Daily Tarot Card/);
+      expect(data.body).not.toMatch(/blergh/);
+    });
+    it("tracks that the mailer was called", ()=> {
+      expect(mailer.sendMail).toHaveBeenCalled()
     });
   });
 })
