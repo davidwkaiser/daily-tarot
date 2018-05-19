@@ -1,4 +1,15 @@
 var functions = {
+    "getCard": function(cards){
+    let cardIndex = functions.randomNumber(cards.length)
+    var direction = functions.inverted()
+    var text = functions.directionText(direction)
+    var output = {
+        card: cards[cardIndex],
+        direction: direction,
+        text: text
+    }
+    return output
+  },
   "randomNumber": function(number){
     return Math.floor(Math.random()*number);
     },

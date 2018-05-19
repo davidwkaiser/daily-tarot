@@ -10,14 +10,7 @@ const mailer = require('./mailer')
 let cards = data.cards
 
 app.get('/', function(req, res){
-  let cardPulled = fn.randomNumber(cards.length)
-  var direction = fn.inverted()
-  var text = fn.directionText(direction)
-  var output = {
-      card: cards[cardPulled],
-      direction: direction,
-      text: text
-    }
+  var output = fn.getCard(cards);
   res.render('index', {
     status: output
   })
