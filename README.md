@@ -23,4 +23,4 @@ Tech stack: Node.JS, Express, Nodemon, EJS, Jasmine, Heroku<br/>
 
 See my portfolio at http://davidwkaiser.squarespace.com<br/>
 See my LinkedIn at http://linkedin.com/in/davidwkaiser<br/>
-And, well, you've already found my GitHub...<br/>
+
