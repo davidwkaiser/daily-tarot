@@ -1,5 +1,5 @@
 const express = require('express')
-const app=express()
+const app = express()
 const fn = require('./functions')
 app.use(express.static(__dirname + '/public'))
 app.set('view engine', 'ejs')

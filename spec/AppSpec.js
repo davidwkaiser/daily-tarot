@@ -20,10 +20,10 @@ describe("Server", ()=> {
         done();
       });
     });
-    it("Status 200", ()=> {
+    it("returns HTTP Status 200", ()=> {
       expect(data.status).toBe(200);
     });
-    it("Body", ()=> {
+    it("returns a correct Body", ()=> {
       expect(data.body).toContain("Your card is");
       expect(data.body).toMatch(/Daily Tarot Card/);
       expect(data.body).not.toMatch(/blergh/);
