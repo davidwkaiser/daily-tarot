@@ -11,8 +11,8 @@ exports.sendMail = function (output){
 
 function setRequest(output){
   var helper = require('sendgrid').mail;
-  var from_email = new helper.Email('davidwkaiser@gmail.com');
-  var to_email = new helper.Email('davidwkaiser@yahoo.com');
+  var from_email = new helper.Email(process.env.from_email);
+  var to_email = new helper.Email(process.env.to_email);
   var subject = 'Your Daily Tarot Card!';
   var content = new helper.Content('text/plain',
     'Your card is '
