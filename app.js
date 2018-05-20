@@ -24,14 +24,12 @@ app.listen(process.env.PORT || 3000, function(){
 })
 
 var job1 = new cron({
-  cronTime: '* * * * *',
+  cronTime: '0 7 * * *',
   onTick: function(){
     var cronOutput = fn.getCard(cards)
     mailer.sendMail(cronOutput)
   },
   start: true
 })
-
-console.log(job1.running)
 
 module.exports = app;
