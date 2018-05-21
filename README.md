@@ -13,7 +13,7 @@ Upgrades to this include:<br/>
 -Mail the card to the user in a nicely formatted HTML email, automatically [IN PROGRESS, CRON WORKS, EMAIL NOT FORMATTED YET]<br/>
 -Add a continuous deployment pipeline [DONE, INCLUDES AUTOMATED TESTING WITH TRAVIS]<br/>
 -Add tests [IN PROGRESS, ADDITIONAL TESTS RECENTLY ADDED]<br/>
--Run as a cron job daily<br/>
+-Run as a cron job daily [DONE]<br/>
 -Make it pretty / add styling [IN PROGRESS]<br/>
 -Add metadata for SEO [DONE]<br/>
 -Modify view to adapt to mobile vs desktop<br/>
