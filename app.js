@@ -1,11 +1,16 @@
 const express = require('express')
 const app = express()
 const fn = require('./functions')
+const fs = require('fs')
+const logger = require('morgan')
+const logFile = fs.createWriteStream(__dirname + '/log.txt', {flags: 'a'})
 var cron = require('cron').CronJob
 
 app.use(express.static(__dirname + '/public'))
+
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
+app.use(logger(':remote-addr :date[web]', {stream: logFile}))
 
 const data = require('./data')
 const mailer = require('./mailer')

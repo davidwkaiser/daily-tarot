@@ -22,7 +22,7 @@ Upgrades to this include:<br/>
 -Extend the cron job to send a daily (HTML) email to subscribers<br/>
 -Add verification of email subscription<br/>
 -Add Google Analytics (or determine if Heroku has analytics)<br/>
--Add a logging function<br/>
+-Add a logging function [DONE]<br/>
 -Add a cool 404 page (Tower?)<br/>
 
 
