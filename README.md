@@ -10,7 +10,7 @@ Upgrades to this include:<br/>
 -Add JPGs  [DONE]<br/>
 -Deploy  [DONE, you can see it here: https://daily-tarot.herokuapp.com]<br/>
 -Add key words for the card [DONE]<br/>
--Mail the card to the user in a nicely formatted HTML email, automatically [IN PROGRESS, CRON WORKS, EMAIL NOT FORMATTED YET]<br/>
+-Mail the card in a nicely formatted HTML email, automatically [IN PROGRESS, CRON WORKS, EMAIL NOT FORMATTED YET]<br/>
 -Add a continuous deployment pipeline [DONE, INCLUDES AUTOMATED TESTING WITH TRAVIS]<br/>
 -Add tests [IN PROGRESS, ADDITIONAL TESTS RECENTLY ADDED]<br/>
 -Run as a cron job daily [DONE]<br/>
