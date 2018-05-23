@@ -3,9 +3,9 @@ var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
 exports.sendMail = function (output){
   var request = setRequest(output);
   sg.API(request, function(error, response) {
-    console.log(response.statusCode);
-    console.log(response.body);
-    console.log(response.headers);
+    console.log("SendGrid status code: "+ response.statusCode);
+    console.log("SendGrid response body: "+ response.body);
+    console.log("SendGrid response headers" + response.headers);
   });
 }
 
