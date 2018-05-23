@@ -5,7 +5,7 @@ exports.sendMail = function (output){
   sg.API(request, function(error, response) {
     console.log("SendGrid status code: "+ response.statusCode);
     console.log("SendGrid response body: "+ response.body);
-    console.log("SendGrid response headers" + response.headers);
+    console.log("SendGrid response headers: " + response.headers.toString());
   });
 }
 
