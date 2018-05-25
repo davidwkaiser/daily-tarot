@@ -5,17 +5,17 @@ Every day, I draw a Tarot card for inspiration and guidance. Now I am building a
 At first, this toy app could select one of four possible cards at random, and tell you which the name of the card. Pretty straightforward.
 
 Upgrades to this include:<br/>
--Add all 78 cards [DONE]<br/>
--Allow for the possibility of inverted cards [DONE, with graphics, too!]<br/>
--Add JPGs  [DONE]<br/>
--Deploy  [DONE, you can see it here: https://daily-tarot.herokuapp.com]<br/>
--Add key words for the card [DONE]<br/>
+-~~Add all 78 cards~~<br/>
+-~~Allow for the possibility of inverted cards~~<br/>
+-~~Add JPGs~~ <br/>
+-~~Deploy~~[You can see it here: https://daily-tarot.herokuapp.com]<br/>
+-~~Add key words for the card~~ <br/>
 -Mail the card in a nicely formatted HTML email, automatically [IN PROGRESS, CRON WORKS, EMAIL NOT FORMATTED YET]<br/>
--Add a continuous deployment pipeline [DONE, INCLUDES AUTOMATED TESTING WITH TRAVIS]<br/>
+-~~Add a continuous deployment pipeline~~ [INCLUDES AUTOMATED TESTING WITH TRAVIS]<br/>
 -Add tests [IN PROGRESS, ADDITIONAL TESTS RECENTLY ADDED]<br/>
--Run as a cron job daily [DONE]<br/>
+-~~Run as a cron job daily~~<br/>
 -Make it pretty / add styling [IN PROGRESS]<br/>
--Add metadata for SEO [DONE]<br/>
+-~~Add metadata for SEO~~<br/>
 -Modify view to adapt to mobile vs desktop<br/>
 -Add a database to store email addresses<br/>
 -Add a form so you can input your email address<br/>
