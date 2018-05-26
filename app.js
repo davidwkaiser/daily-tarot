@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express()
 const fn = require('./functions')
+const data = require('./data')
+const mailer = require('./mailer')
+const cards = data.cards
 var cron = require('cron').CronJob
 
 // code related to logging is useful, but doesn't work in Heroku, so it has been
@@ -15,10 +18,6 @@ app.use(express.static(__dirname + '/public'))
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 // app.use(logger(':remote-addr :date[web]', {stream: logFile}))
-
-const data = require('./data')
-const mailer = require('./mailer')
-let cards = data.cards
 
 app.get('/', function(req, res){
   console.log("LOG: Requesting IP address - " + req.ip)
