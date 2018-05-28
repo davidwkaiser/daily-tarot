@@ -1,15 +1,7 @@
-var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
+var mailer = {
+  sg: require('sendgrid')(process.env.SENDGRID_API_KEY),
 
-exports.sendMail = function (output){
-  var request = setRequest(output);
-  sg.API(request, function(error, response) {
-    console.log("SendGrid status code: "+ response.statusCode);
-    console.log("SendGrid response body: "+ response.body);
-    console.log("SendGrid response headers: " + response.headers.toString());
-  });
-}
-
-function setRequest(output){
+setRequest: function (output){
   var helper = require('sendgrid').mail;
   var from_email = new helper.Email(process.env.from_email);
   var to_email = new helper.Email(process.env.to_email);
@@ -20,11 +12,21 @@ function setRequest(output){
     + output.text + "!")
   var mail = new helper.Mail(from_email, subject, to_email, content);
 
-  var completedRequest = sg.emptyRequest({
+  var completedRequest = mailer.sg.emptyRequest({
     method: 'POST',
     path: '/v3/mail/send',
     body: mail.toJSON(),
   });
   return completedRequest;
-}
+  },
 
+sendMail: function (output){
+  var request = mailer.setRequest(output);
+  mailer.sg.API(request, function(error, response) {
+    console.log("SendGrid status code: "+ response.statusCode);
+    console.log("SendGrid response body: "+ response.body);
+    console.log("SendGrid response headers: " + response.headers.toString());
+    });
+  }
+}
+module.exports = mailer;

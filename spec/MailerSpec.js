@@ -1,15 +1,18 @@
-var fn = require("../mailer");
+var mailer = require("../mailer");
 const data = require('../data')
 let cards = data.cards
 
-describe('Mailer File', function(){
-  beforeAll(()=> {
-    var output = {
-      // add data
+var output = {
+      card: cards[0],
+      direction: 0,
+      text: ""
     }
-  })
+
+describe('Mailer File', function(){
 
   it('creates a proper SG mail request', function(){
-      return true
+    request = mailer.setRequest(output);
+    expect(request.method).toEqual('POST')
+    expect(request.body.content[0].value).toEqual('Your card is The Fool!')
   })
 })
