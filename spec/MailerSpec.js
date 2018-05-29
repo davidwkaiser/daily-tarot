@@ -13,6 +13,7 @@ describe('Mailer File', function(){
   it('creates a proper SG mail request', function(){
     request = mailer.setRequest(output);
     expect(request.method).toEqual('POST')
-    expect(request.body.content[0].value).toEqual('Your card is The Fool!')
+    expect(request.body.content[0].value).toEqual('Your card is The Fool!\nInnocence, New Beginnings, Optimism')
+    expect(request.body.content[0].value).toMatch("Innocence")
   })
 })

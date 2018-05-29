@@ -6,10 +6,12 @@ setRequest: function (output){
   var from_email = new helper.Email(process.env.from_email);
   var to_email = new helper.Email(process.env.to_email);
   var subject = 'Your Daily Tarot Card!';
+  var keywords = this.getKeywords(output.card.keywords)
   var content = new helper.Content('text/plain',
     'Your card is '
     + output.card.name
-    + output.text + "!")
+    + output.text + "!\n"
+    + keywords)
   var mail = new helper.Mail(from_email, subject, to_email, content);
 
   var completedRequest = mailer.sg.emptyRequest({
@@ -19,6 +21,10 @@ setRequest: function (output){
   });
   return completedRequest;
   },
+
+getKeywords: function(arrayOfWords){
+  return arrayOfWords.join(', ')
+},
 
 sendMail: function (output){
   var request = mailer.setRequest(output);
