@@ -10,7 +10,7 @@ setRequest: function (output){
   var content = new helper.Content('text/plain',
     'Your card is '
     + output.card.name
-    + output.text + "!\n"
+    + output.text + '!\n'
     + keywords)
   var mail = new helper.Mail(from_email, subject, to_email, content);
 
@@ -31,7 +31,8 @@ sendMail: function (output){
   mailer.sg.API(request, function(error, response) {
     console.log("SendGrid status code: "+ response.statusCode);
     console.log("SendGrid response body: "+ response.body);
-    console.log("SendGrid response headers: " + response.headers.toString());
+    console.log("SendGrid response headers:");
+    console.log(response.headers);
     });
   }
 }
