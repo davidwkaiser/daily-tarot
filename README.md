@@ -11,12 +11,13 @@ Upgrades to this include:<br/>
 -~~Deploy~~[You can see it here: https://daily-tarot.herokuapp.com]<br/>
 -~~Add key words for the card~~ <br/>
 -~~Mail the card automatically~~<br/>
--Mail via formatted HTML email<br/>
 -~~Add a continuous deployment pipeline~~ [INCLUDES AUTOMATED TESTING WITH TRAVIS]<br/>
--Add tests [IN PROGRESS, ADDITIONAL TESTS RECENTLY ADDED]<br/>
 -~~Run as a cron job daily~~<br/>
--Make it pretty / add styling [IN PROGRESS]<br/>
 -~~Add metadata for SEO~~<br/>
+-~~Add a cool 404 page (Tower?)~~<br/>
+-Add tests [IN PROGRESS, ADDITIONAL TESTS RECENTLY ADDED]<br/>
+-Mail via formatted HTML email<br/>
+-Make it pretty / add styling [IN PROGRESS]<br/>
 -Modify view to adapt to mobile vs desktop<br/>
 -Add a database to store email addresses<br/>
 -Add a form so you can input your email address<br/>
@@ -24,7 +25,7 @@ Upgrades to this include:<br/>
 -Add verification of email subscription<br/>
 -Add Google Analytics (or determine if Heroku has analytics)<br/>
 -Add a logging function [PARTIALLY DONE, WILL BE EXPANDED WHEN WE HAVE A DB]<br/>
--~~Add a cool 404 page (Tower?)~~<br/>
+
 
 
 Tech stack: Node.JS, Express, Nodemon, EJS, Jasmine, Heroku<br/>
