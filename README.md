@@ -24,7 +24,7 @@ Upgrades to this include:<br/>
 -Add verification of email subscription<br/>
 -Add Google Analytics (or determine if Heroku has analytics)<br/>
 -Add a logging function [PARTIALLY DONE, WILL BE EXPANDED WHEN WE HAVE A DB]<br/>
--Add a cool 404 page (Tower?)[STARTED, CUSTOM 404 ADDED, NOT COOL YET, THOUGH...]<br/>
+-~~Add a cool 404 page (Tower?)~~<br/>
 
 
 Tech stack: Node.JS, Express, Nodemon, EJS, Jasmine, Heroku<br/>

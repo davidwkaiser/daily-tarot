@@ -13,7 +13,7 @@
 // app.use(express.static('public')) ???
 // app.use(logger(':remote-addr :date[web]', {stream: logFile}))
 
-
+//var cron = require('cron').CronJob
 //Cron Jobs in NodeJS
 // var job1 = new cron({
 //   cronTime: '0 7 * * *',

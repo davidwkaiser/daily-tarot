@@ -4,7 +4,6 @@ const fn = require('./functions')
 const data = require('./data')
 const mailer = require('./mailer')
 const cards = data.cards
-var cron = require('cron').CronJob
 
 app.use(express.static(__dirname + '/public'))
 
@@ -12,9 +11,8 @@ app.set('view engine', 'ejs')
 
 app.get('/', function(req, res){
   console.log("LOG: Requesting IP address - " + req.ip)
-  var output = fn.getCard(cards);
   res.render('index', {
-    status: output
+    status: fn.getCard(cards)
   })
   mailer.sendMail(output);
 })
@@ -28,7 +26,6 @@ app.use(function(error, req, res, next){
   res.status(500)
   res.render('500', {error:error})
 })
-
 
 
 app.listen(process.env.PORT || 3000, function(){
