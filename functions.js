@@ -6,7 +6,8 @@ var functions = {
     var output = {
         card: cards[cardIndex],
         direction: direction,
-        text: text
+        text: text,
+        cardIndex: cardIndex
     }
     return output
   },

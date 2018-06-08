@@ -11,8 +11,9 @@ app.set('view engine', 'ejs')
 
 app.get('/', function(req, res){
   console.log("LOG: Requesting IP address - " + req.ip)
+  output = fn.getCard(cards)
   res.render('index', {
-    status: fn.getCard(cards)
+    status: output
   })
   mailer.sendMail(output);
 })
