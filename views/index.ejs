@@ -22,9 +22,9 @@
     <% } %>
   </div>
   <div  class="<%=status.cardIndex %>">
-    <form id="cardIndex" onsubmit="emailme(); return false">
-      <input type="text" name="email" placeholder="name@example.com" >
-      <!-- <input type="submit" > -->
+    <form onsubmit="emailme(); return false">
+      <input type="text" name="email" placeholder="name@example.com" id="userEmail">
+      <input type ="hidden" name="cardIndex" value="<%=status.cardIndex %>" id="cardIndex">
     </form>
   </div>
 </body>
@@ -35,6 +35,8 @@
     image.setAttribute("style", "transform: rotate(180deg)")
 }
 function emailme(e){
-  alert("button clicked!")
+  let email = document.getElementById("userEmail").value
+  let index = document.getElementById("cardIndex").value
+  alert(email + " " + index)
 }
 </script>
