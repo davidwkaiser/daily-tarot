@@ -21,12 +21,20 @@
       <p> <%= status.card.keywords[i] %></p>
     <% } %>
   </div>
-  <div class="<%=status.cardIndex %>"></div>
+  <div  class="<%=status.cardIndex %>">
+    <form id="cardIndex" onsubmit="emailme(); return false">
+      <input type="text" name="email" placeholder="name@example.com" >
+      <!-- <input type="submit" > -->
+    </form>
+  </div>
 </body>
 <script>
   var cardText = document.getElementById("cardText").innerText
   var image = document.getElementById("card")
   if (cardText.includes("inverted")) {
     image.setAttribute("style", "transform: rotate(180deg)")
+}
+function emailme(e){
+  alert("button clicked!")
 }
 </script>
