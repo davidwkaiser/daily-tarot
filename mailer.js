@@ -1,10 +1,10 @@
 var mailer = {
   sg: require('sendgrid')(process.env.SENDGRID_API_KEY),
 
-setRequest: function (output){
+setRequest: function (output, email){
   var helper = require('sendgrid').mail;
   var from_email = new helper.Email(process.env.from_email);
-  var to_email = new helper.Email(process.env.to_email);
+  var to_email = new helper.Email(email);
   var subject = 'Your Daily Tarot Card!';
   var keywords = this.getKeywords(output.card.keywords)
   var content = new helper.Content('text/plain',

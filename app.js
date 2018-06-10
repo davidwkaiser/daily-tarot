@@ -3,19 +3,31 @@ const app = express()
 const fn = require('./functions')
 const data = require('./data')
 const mailer = require('./mailer')
-const cards = data.cards
+//const cards = data.cards
 
 app.use(express.static(__dirname + '/public'))
 
 app.set('view engine', 'ejs')
 
+app.get('/mailme/:index/:email', function(req, res){
+  // console.log("yay!")
+  let index = req.params.index
+  let email = req.params.email
+  console.log(index)
+  console.log(email)
+  let value = fn.cardByIndex(index)
+  console.log("card: " + value.card.name)
+  mailer.sendMail(output, email)
+})
+
 app.get('/', function(req, res){
   console.log("LOG: Requesting IP address - " + req.ip)
-  output = fn.getCard(cards)
+  output = fn.getCard()
   res.render('index', {
     status: output
   })
-  mailer.sendMail(output);
+  mailer.sendMail(output, "davidwkaiser@yahoo.com");
+  // mailer.sendMail(output, process.env.to_email);
 })
 
 app.use(function(req,res){

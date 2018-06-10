@@ -1,5 +1,8 @@
+const data = require('./data')
+const cards = data.cards
+
 var functions = {
-    "getCard": function(cards){
+    "getCard": function(){
     let cardIndex = functions.randomNumber(cards.length)
     var direction = functions.inverted()
     var text = functions.directionText(direction)
@@ -19,6 +22,14 @@ var functions = {
    },
   "directionText": function(direction){
     return direction === 0 ? "" : ", inverted"
+   },
+   "cardByIndex": function(index){
+    console.log("in function card: ")
+    console.log(cards[index].name)
+    return {
+      card: cards[index],
+      text: ""
+    }
    }
 }
 

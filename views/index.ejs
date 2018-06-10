@@ -37,6 +37,10 @@
 function emailme(e){
   let email = document.getElementById("userEmail").value
   let index = document.getElementById("cardIndex").value
-  alert(email + " " + index)
+  // alert(email + " " + index)
+  let xhttp = new XMLHttpRequest();
+  xhttp.open("get", '/mailme/'+index+'/' +email, false)
+  xhttp.send()
+
 }
 </script>
