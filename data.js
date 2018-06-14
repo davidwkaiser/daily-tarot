@@ -67,7 +67,7 @@ exports.cards = [
   {name:"Two of Pentacles", image: "pents02.jpg", keywords: ["Ease", "Grace", "Balance"]},
   {name:"Three of Pentacles", image: "pents03.jpg", keywords: ["Teamwork", "Cooperation", "Different Spheres Coming Together"]},
   {name:"Four of Pentacles", image: "pents04.jpg", keywords: ["Maintaining Control", "Hanging On To Something"]},
-  {name:"Five of Pentacles", image: "pents05.jpg", keywords: ["Suffering", "Deprivation", "Time In THe Wilderness"]},
+  {name:"Five of Pentacles", image: "pents05.jpg", keywords: ["Suffering", "Deprivation", "Time In The Wilderness"]},
   {name:"Six of Pentacles", image: "pents06.jpg", keywords: ["To Have and Have Not", "Judging Worthiness"]},
   {name:"Seven of Pentacles", image: "pents07.jpg", keywords: ["Stepping Back", "Assessing"]},
   {name:"Eight of Pentacles", image: "pents08.jpg", keywords: ["Persistence", "Craftmanship", "Focus", "Enjoying One's Work"]},

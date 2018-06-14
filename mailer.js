@@ -26,8 +26,8 @@ getKeywords: function(arrayOfWords){
   return arrayOfWords.join(', ')
 },
 
-sendMail: function (output){
-  var request = mailer.setRequest(output);
+sendMail: function (output, email){
+  var request = mailer.setRequest(output, email);
   mailer.sg.API(request, function(error, response) {
     console.log("SendGrid status code: "+ response.statusCode);
     console.log("SendGrid response body: ");
