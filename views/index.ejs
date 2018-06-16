@@ -21,10 +21,13 @@
       <p> <%= status.card.keywords[i] %></p>
     <% } %>
   </div>
-  <div  class="<%=status.cardIndex %>">
+  <div  class="text">
     <form onsubmit="emailme(); return false">
+      <span>
       <input type="text" name="email" placeholder="name@example.com" id="userEmail">
       <input type ="hidden" name="cardIndex" value="<%=status.cardIndex %>" id="cardIndex">
+      <input type="submit" value="email me this!" onclick="emailme(); return false">
+    </span>
     </form>
   </div>
 </body>
@@ -41,6 +44,6 @@ function emailme(e){
   let xhttp = new XMLHttpRequest();
   xhttp.open("get", '/mailme/'+index+'/' +email, false)
   xhttp.send()
-
+  email.value = ""
 }
 </script>

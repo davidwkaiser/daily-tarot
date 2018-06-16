@@ -20,7 +20,10 @@ Upgrades to this include:<br/>
 -Make it pretty / add styling [IN PROGRESS]<br/>
 -Modify view to adapt to mobile vs desktop<br/>
 -Add a database to store email addresses<br/>
--Add a form so you can input your email address<br/>
+-~~Add a form so you can input your email address, then mail it!~~<br/>
+-Change email handling to a post<br/>
+-Validate email input<br/>
+-Sterilize email input<br/>
 -Extend the cron job to send a daily (HTML) email to subscribers<br/>
 -Add verification of email subscription<br/>
 -Add Google Analytics (or determine if Heroku has analytics)<br/>
