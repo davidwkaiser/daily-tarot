@@ -26,7 +26,7 @@
       <span>
       <input type="text" name="email" placeholder="name@example.com" id="userEmail">
       <input type ="hidden" name="cardIndex" value="<%=status.cardIndex %>" id="cardIndex">
-      <input type="submit" value="email me this!" onclick="emailme(); return false">
+      <!-- <input type="submit" value="email me this!" onclick="emailme(); return false"> -->
     </span>
     </form>
   </div>
@@ -38,12 +38,13 @@
     image.setAttribute("style", "transform: rotate(180deg)")
 }
 function emailme(e){
-  let email = document.getElementById("userEmail").value
-  let index = document.getElementById("cardIndex").value
-  // alert(email + " " + index)
+  let email = document.getElementById("userEmail")
+  let index = document.getElementById("cardIndex")
+  let request = "email="+email.value+"&index="+index.value
   let xhttp = new XMLHttpRequest();
-  xhttp.open("get", '/mailme/'+index+'/' +email, false)
-  xhttp.send()
+  xhttp.open("POST", "/mailme", true)
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+  xhttp.send(request)
   email.value = ""
 }
 </script>

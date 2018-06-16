@@ -24,8 +24,6 @@ var functions = {
     return direction === 0 ? "" : ", inverted"
    },
    "cardByIndex": function(index){
-    console.log("in function card: ")
-    console.log(cards[index].name)
     return {
       card: cards[index],
       text: ""

@@ -1,17 +1,19 @@
 const express = require('express')
-const app = express()
+const bodyParser = require('body-parser')
 const fn = require('./functions')
 const data = require('./data')
 const mailer = require('./mailer')
-//const cards = data.cards
+const app = express()
 
 app.use(express.static(__dirname + '/public'))
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json())
 
 app.set('view engine', 'ejs')
 
-app.get('/mailme/:index/:email', function(req, res){
-  let index = req.params.index
-  let email = req.params.email
+app.post('/mailme', function(req, res){
+  let index = req.body.index
+  let email = req.body.email
   let value = fn.cardByIndex(index)
   mailer.sendMail(output, email)
 })
