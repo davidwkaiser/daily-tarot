@@ -26,7 +26,7 @@
       <span>
       <input type="text" name="email" placeholder="name@example.com" id="userEmail">
       <input type ="hidden" name="cardIndex" value="<%=status.cardIndex %>" id="cardIndex">
-      <!-- <input type="submit" value="email me this!" onclick="emailme(); return false"> -->
+      <input type="submit" value="email me this!" onclick="emailme(); return false">
     </span>
     </form>
   </div>
@@ -45,6 +45,7 @@ function emailme(e){
   xhttp.open("POST", "/mailme", true)
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
   xhttp.send(request)
+  alert("Your card is on its way!")
   email.value = ""
 }
 </script>
