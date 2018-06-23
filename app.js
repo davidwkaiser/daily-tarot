@@ -15,7 +15,7 @@ app.post('/mailme', function(req, res){
   let index = req.body.index
   let email = req.body.email
   let value = fn.cardByIndex(index)
-  mailer.sendMail(output, email)
+  mailer.sendMail(value, email)
 })
 
 app.get('/', function(req, res){

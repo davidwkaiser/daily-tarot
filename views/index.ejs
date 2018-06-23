@@ -22,11 +22,11 @@
     <% } %>
   </div>
   <div  class="text">
-    <form onsubmit="emailme(); return false">
+    <form onsubmit="validate(); return false">
       <span>
       <input type="text" name="email" placeholder="name@example.com" id="userEmail">
       <input type ="hidden" name="cardIndex" value="<%=status.cardIndex %>" id="cardIndex">
-      <input type="submit" value="email me this!" onclick="emailme(); return false">
+      <input type="submit" value="email me this!" onclick="validate(); return false">
     </span>
     </form>
   </div>
@@ -37,13 +37,18 @@
   if (cardText.includes("inverted")) {
     image.setAttribute("style", "transform: rotate(180deg)")
 }
-function emailme(e){
+function validate(e){
   const emailRegex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i;
   let email = document.getElementById("userEmail")
     if (emailRegex.test(email.value)===false){
       alert("Please enter a valid email address!")
       email.value = ""
     } else {
+      callServer(email)
+  }
+}
+
+function callServer(email){
   let index = document.getElementById("cardIndex")
   let request = "email="+email.value+"&index="+index.value
   let xhttp = new XMLHttpRequest();
@@ -53,5 +58,4 @@ function emailme(e){
   alert("Your card is on its way!")
   email.value = ""
   }
-}
 </script>
