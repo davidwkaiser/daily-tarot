@@ -38,7 +38,12 @@
     image.setAttribute("style", "transform: rotate(180deg)")
 }
 function emailme(e){
+  const emailRegex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i;
   let email = document.getElementById("userEmail")
+    if (emailRegex.test(email.value)===false){
+      alert("Please enter a valid email address!")
+      email.value = ""
+    } else {
   let index = document.getElementById("cardIndex")
   let request = "email="+email.value+"&index="+index.value
   let xhttp = new XMLHttpRequest();
@@ -47,5 +52,6 @@ function emailme(e){
   xhttp.send(request)
   alert("Your card is on its way!")
   email.value = ""
+  }
 }
 </script>
