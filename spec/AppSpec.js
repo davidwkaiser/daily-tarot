@@ -5,7 +5,7 @@ describe("Server", ()=> {
   beforeAll(()=> {
     server = require("../app");
     mailer = require("../mailer")
-    spyOn(mailer, 'sendMail').and.callThrough();
+    spyOn(mailer, 'sendMail')//.and.callThrough();
   });
   afterAll(()=> {
     // server.close();
@@ -32,4 +32,27 @@ describe("Server", ()=> {
       expect(mailer.sendMail).toHaveBeenCalled()
     });
   });
+
+  describe("POST /mailme", ()=>{
+    var status = null;
+    var body = {
+      email:"abc@example.com",
+      value: 15
+  };
+    beforeAll((done)=>{
+      Request.post("http://localhost:3000/mailme", function(error, response, body){
+          status = response.statusCode;
+          done();
+      })
+    });
+    it("returns HTTP status 200", ()=>{
+      expect(status).toBe(200);
+    })
+    it("tracks that the mailer was called", ()=> {
+      expect(mailer.sendMail).toHaveBeenCalled()
+    });
+  })
+
+
+
 })
