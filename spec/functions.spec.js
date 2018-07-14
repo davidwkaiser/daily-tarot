@@ -27,4 +27,9 @@ describe('Functions File', function () {
     output = fn.getCard(cards)
     expect(output.card).not.toBeNull
   })
+
+  it("cardByIndex() returns the right card", function(){
+    output = fn.cardByIndex(3)
+    expect(output.card.name).toEqual("The Empress")
+  })
 });

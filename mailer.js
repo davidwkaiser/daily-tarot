@@ -29,11 +29,11 @@ getKeywords: function(arrayOfWords){
 sendMail: function (output, email){
   var request = mailer.setRequest(output, email);
   mailer.sg.API(request, function(error, response) {
-    console.log("SendGrid status code: "+ response.statusCode);
-    console.log("SendGrid response body: ");
-    console.log(response.body)
-    console.log("SendGrid response headers:");
-    console.log(response.headers);
+    // console.log("SendGrid status code: "+ response.statusCode);
+    // console.log("SendGrid response body: ");
+    // console.log(response.body)
+    // console.log("SendGrid response headers:");
+    // console.log(response.headers);
     });
   }
 }
