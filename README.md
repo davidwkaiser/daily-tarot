@@ -31,7 +31,7 @@ Upgrades to this include:<br/>
 
 
 
-Tech stack: Node.JS, Express, Nodemon, EJS, Jasmine, Heroku<br/>
+Tech stack: Node.JS, Express, Nodemon, EJS, Jasmine, Heroku, Travis<br/>
 
 See my portfolio at http://davidwkaiser.squarespace.com<br/>
 See my LinkedIn at http://linkedin.com/in/davidwkaiser<br/>
