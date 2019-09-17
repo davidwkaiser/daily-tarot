@@ -18,6 +18,8 @@ Upgrades to this include:<br/>
 -~~Add a form so you can input your email address, then mail it!~~<br/>
 -~~Change email handling to a post~~<br/>
 -~~Validate email input~~<br/>
+-Update Heroku Stack<br/>
+-Add Sender Authentication in SendGrid<br/>
 -Add tests [IN PROGRESS, ADDITIONAL TESTS RECENTLY ADDED]<br/>
 -Mail via formatted HTML email<br/>
 -Make it pretty / add styling [IN PROGRESS]<br/>
