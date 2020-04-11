@@ -1,5 +1,10 @@
+/*img {
+  height: 20px;
+  width: auto;
+}*/
+
 #card {
-  width: 80%;
+  width: 20%;
   height: auto;
   display: block;
   margin-right: auto;
