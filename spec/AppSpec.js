@@ -2,7 +2,7 @@ var Request = require("request");
 
 describe("Server", function() {
   var server;
-  beforeAll(()=> {
+  beforeAll(function() {
     server = require("../app");
     mailer = require("../mailer")
     spyOn(mailer, 'sendMail')//.and.callThrough();
