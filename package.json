@@ -44,7 +44,7 @@
     "nodemon": "^2.0.4",
     "request": "^2.87.0",
     "sendgrid": "^4.2.0",
-    "set-value": ">=2.0.1"
+    "set-value": ">=4.0.1"
   },
   "devDependencies": {
     "jasmine": "^3.1.0"
