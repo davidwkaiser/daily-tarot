@@ -40,12 +40,13 @@
 function validate(e){
   const emailRegex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i;
   let email = document.getElementById("userEmail")
-    if (emailRegex.test(email.value)===false){
-      alert("Please enter a valid email address!")
-      email.value = ""
-    } else {
-      callServer(email)
-  }
+    alert("We are rebuilding this function")
+//     if (emailRegex.test(email.value)===false){
+//       alert("Please enter a valid email address!")
+//       email.value = ""
+//     } else {
+//       callServer(email)
+//   }
 }
 
 function callServer(email){

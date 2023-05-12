@@ -4,7 +4,7 @@
   "description": "An App to generate a Tarot card each day for growth and guidance",
   "main": "app.js",
   "engines": {
-    "node": "6.10.1"
+    "node": "14.17.5"
   },
   "scripts": {
     "test-init": "./node_modules/jasmine/bin/jasmine.js init",
@@ -22,7 +22,7 @@
     "react",
     "mail",
     "jasmine",
-    "heroku",
+    "render",
     "sendgrid"
   ],
   "author": "David Kaiser",
@@ -32,19 +32,19 @@
   },
   "homepage": "https://github.com/davidwkaiser/daily-tarot#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.2",
     "cron": "^1.3.0",
-    "ejs": "^2.6.1",
-    "express": "^4.16.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
     "kind-of": ">=6.0.3",
     "mime": ">=1.4.1",
-    "minimist": ">=1.2.3",
+    "minimist": "^1.2.8",
     "mixin-deep": ">=1.3.2",
     "morgan": "^1.9.1",
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.20",
     "request": "^2.87.0",
     "sendgrid": "^4.2.0",
-    "set-value": ">=2.0.1"
+    "set-value": "^4.1.0"
   },
   "devDependencies": {
     "jasmine": "^3.1.0"
