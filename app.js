@@ -12,10 +12,10 @@ app.use(bodyParser.json())
 app.set('view engine', 'ejs')
 
 app.post('/mailme', function(req, res){
-  // let index = req.body.index
-  // let email = req.body.email
-  // let value = fn.cardByIndex(index)
-  // mailer.sendMail(value, email)
+  let index = req.body.index
+  let email = req.body.email
+  let value = fn.cardByIndex(index)
+  mailer.sendMail(value, email)
   res.end()
 })
 
@@ -25,7 +25,7 @@ app.get('/', function(req, res){
   res.render('index', {
     status: output
   })
-  // mailer.sendMail(output, process.env.to_email);
+  mailer.sendMail(output, process.env.TO_EMAIL);
 })
 
 app.use(function(req,res){
