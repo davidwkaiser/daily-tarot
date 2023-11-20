@@ -28,13 +28,19 @@ Upgrades to this include:<br/>
 -Sterilize email input<br/>
 -Extend the cron job to send a daily (HTML) email to subscribers<br/>
 -Add verification of email subscription<br/>
--Add Google Analytics (or determine if Heroku has analytics)<br/>
 -Add a logging function [PARTIALLY DONE, WILL BE EXPANDED WHEN WE HAVE A DB]<br/>
 
-
+To monetize:<br/>
+-Add SEO<br/>
+-Add Google Analytics (or determine if Render has analytics)<br/>
+-Add a nice URL<br/>
+-Add Google ads<br/>
+-Add Google ads to email as well<br/>
+-Add a DB<br/>
+-Restore the cron<br/>
+-Add an about page<br/>
 
 Tech stack: Node.JS, Express, Nodemon, EJS, Jasmine, Heroku, Travis<br/>
 
-See my portfolio at http://davidwkaiser.squarespace.com<br/>
 See my LinkedIn at http://linkedin.com/in/davidwkaiser<br/>
 
