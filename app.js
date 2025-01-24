@@ -38,9 +38,9 @@ app.use(function(error, req, res, next){
   res.render('500', {error:error})
 })
 
-
-app.listen(process.env.PORT || 3000, function(){
-  console.log("app listening on port 3000 locally or process.env.PORT at Heroku!")
+const port = process.env.PORT || 3000;
+app.listen(port, function(){
+  console.log(`app listening on port ${port}!`)
 })
 
 module.exports = app;

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "An App to generate a Tarot card each day for growth and guidance",
   "main": "app.js",
-  "engines": {
-    "node": "21.7.3"
+  "engines": { 
+    "node": "22.x" 
   },
   "scripts": {
     "test-init": "./node_modules/jasmine/bin/jasmine.js init",
