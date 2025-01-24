@@ -4,7 +4,7 @@
   "description": "An App to generate a Tarot card each day for growth and guidance",
   "main": "app.js",
   "engines": {
-    "node": "14.17.5"
+    "node": "21.7.3"
   },
   "scripts": {
     "test-init": "./node_modules/jasmine/bin/jasmine.js init",
