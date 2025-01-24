@@ -2,14 +2,14 @@
   "name": "daily-tarot",
   "version": "1.0.0",
   "description": "An App to generate a Tarot card each day for growth and guidance",
-  "main": "index.js",
+  "main": "api/index.js",
   "engines": { 
     "node": "22.x" 
   },
   "scripts": {
     "test-init": "./node_modules/jasmine/bin/jasmine.js init",
     "test": "jasmine",
-    "start": "node index.js"
+    "start": "node api/index.js"
   },
   "repository": {
     "type": "git",

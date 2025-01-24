@@ -1,11 +1,13 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const fn = require('./functions')
-const data = require('./data')
-const mailer = require('./mailer')
+const fn = require('../functions')
+const data = require('../data')
+const mailer = require('../mailer')
 const app = express()
 
-app.use(express.static(__dirname + '/public'))
+// app.use(express.static(__dirname + '/public'))
+app.use(express.static('public'))
+
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
