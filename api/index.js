@@ -23,6 +23,7 @@ app.get('/cron', function(req, res){
   console.log("CRON JOB")
   output = fn.getCard()
   mailer.sendMail(output, process.env.TO_EMAIL);
+  res.end()
 })
 
 app.get('/', function(req, res){
