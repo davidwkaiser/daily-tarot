@@ -24,7 +24,7 @@ app.post('/mailme', function(req, res){
 app.get('/', function(req, res){
   console.log("LOG: Requesting IP address - " + req.ip)
   output = fn.getCard()
-  res.render('index', {
+  res.render('../views/index', {
     status: output
   })
   mailer.sendMail(output, process.env.TO_EMAIL);
