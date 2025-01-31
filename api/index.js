@@ -13,11 +13,8 @@ app.set("views", __dirname + "/views");
 app.post('/mailme', function(req, res){
   console.log(req)
   let index = req.body.index
-  console.log(index)
   let email = req.body.email
-  console.log(email)
   let value = fn.cardByIndex(index)
-  console.log(value)
   mailer.sendMail(value, email)
   res.end()
 })
