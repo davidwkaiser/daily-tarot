@@ -33,7 +33,7 @@ app.get('/', function(req, res){
 app.get('/logging', function(re4q, res){
   console.log('directory: ', process.cwd())
   console.log('views ', app.get('views'))
-  res.render('directory: ' + process.cwd() + '\nviews: ', app.get('views'))
+  res.send('directory: ' + process.cwd() + '\nviews: ', app.get('views'))
 })
 
 app.use(function(req,res){
