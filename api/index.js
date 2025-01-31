@@ -19,6 +19,12 @@ app.post('/mailme', function(req, res){
   res.end()
 })
 
+app.get('/cron', function(req, res){
+  console.log("CRON JOB")
+  output = fn.getCard()
+  mailer.sendMail(output, process.env.TO_EMAIL);
+})
+
 app.get('/', function(req, res){
   console.log("LOG: Requesting IP address - " + req.ip)
   output = fn.getCard()
