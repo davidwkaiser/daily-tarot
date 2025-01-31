@@ -1,7 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const fn = require('../functions')
-const data = require('../data')
 const mailer = require('../mailer')
 const app = express()
 
@@ -12,9 +11,13 @@ app.set('view engine', 'ejs')
 app.set("views", __dirname + "/views");
 
 app.post('/mailme', function(req, res){
+  console.log(req)
   let index = req.body.index
+  console.log(index)
   let email = req.body.email
+  console.log(email)
   let value = fn.cardByIndex(index)
+  console.log(value)
   mailer.sendMail(value, email)
   res.end()
 })
