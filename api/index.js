@@ -23,6 +23,7 @@ app.post('/mailme', function(req, res){
 
 app.get('/', function(req, res){
   console.log("LOG: Requesting IP address - " + req.ip)
+  console.log('directory: ', process.cwd())
   output = fn.getCard()
   res.render('index', {
     status: output
