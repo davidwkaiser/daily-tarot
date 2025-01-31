@@ -31,9 +31,10 @@ app.get('/', function(req, res){
 })
 
 app.get('/logging', function(re4q, res){
-  console.log('directory: ', process.cwd())
-  console.log('views ', app.get('views'))
-  res.send('directory: ' + process.cwd() + '\nviews: ', app.get('views'))
+  // console.log('directory: ', process.cwd())
+  // console.log('views ', app.get('views'))
+  // res.send('directory: ' + process.cwd() + '\nviews: ', app.get('views'))
+  res.status(status).send("boo ya")
 })
 
 app.use(function(req,res){
