@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
 app.set('view engine', 'ejs')
+app.set("views", __dirname + "/views");
 
 app.post('/mailme', function(req, res){
   let index = req.body.index
