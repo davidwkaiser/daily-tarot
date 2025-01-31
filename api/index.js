@@ -34,7 +34,7 @@ app.get('/logging', function(re4q, res){
   // console.log('directory: ', process.cwd())
   // console.log('views ', app.get('views'))
   // res.send('directory: ' + process.cwd() + '\nviews: ', app.get('views'))
-  res.status(200).send("boo ya")
+  res.status(200).send({directory: process.cwd(), views: app.get('views')})
 })
 
 app.use(function(req,res){
