@@ -22,7 +22,7 @@ app.post('/mailme', function(req, res){
 app.get('/cron', function(req, res){
   console.log("CRON JOB")
   output = fn.getCard()
-  mailer.sendMail(output, process.env.TO_EMAIL);
+  await mailer.sendMail(output, process.env.TO_EMAIL);
   res.end()
 })
 
@@ -32,7 +32,7 @@ app.get('/', function(req, res){
   res.render('index', {
     status: output
   })
-  mailer.sendMail(output, process.env.TO_EMAIL);
+  await mailer.sendMail(output, process.env.TO_EMAIL);
 })
 
 app.use(function(req,res){
