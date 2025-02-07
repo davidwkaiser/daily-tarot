@@ -32,7 +32,7 @@ app.get('/', function(req, res){
   res.render('index', {
     status: output
   })
-  await mailer.sendMail(output, process.env.TO_EMAIL);
+  mailer.sendMail(output, process.env.TO_EMAIL);
 })
 
 app.use(function(req,res){
@@ -49,5 +49,3 @@ const port = process.env.PORT || 3000;
 app.listen(port, function(){
   console.log(`app listening on port ${port}!`)
 })
-
-module.exports = app;
