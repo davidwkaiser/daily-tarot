@@ -10,18 +10,30 @@ app.use(bodyParser.json())
 app.set('view engine', 'ejs')
 app.set("views", __dirname + "/views");
 
-app.post('/mailme', async function(req, res){
+app.post('/mailme', function(req, res){
   console.log(req)
   let index = req.body.index
   let email = req.body.email
   let value = fn.cardByIndex(index)
-  await mailer.sendMail(value, email)
+  mailer.sendMail(value, email)
   res.end()
 })
 
-app.get('/cron', cron)
+app.get('/cron', function(req, res){
+  console.log("CRON JOB")
+  output = fn.getCard()
+  mailer.sendMail(output, process.env.TO_EMAIL);
+  res.end()
+})
 
-app.get('/', rootLevel)
+app.get('/', function(req, res){
+  console.log("LOG: Requesting IP address - " + req.ip)
+  output = fn.getCard()
+  res.render('index', {
+    status: output
+  })
+  await mailer.sendMail(output, process.env.TO_EMAIL);
+})
 
 app.use(function(req,res){
   res.status(400)
@@ -37,22 +49,5 @@ const port = process.env.PORT || 3000;
 app.listen(port, function(){
   console.log(`app listening on port ${port}!`)
 })
-
-const rootLevel = async function(req, res){
-  console.log("LOG: Requesting IP address - " + req.ip)
-  output = fn.getCard()
-  res.render('index', {
-    status: output
-  })
-  await mailer.sendMail(output, process.env.TO_EMAIL);
-}
-
-
-const cron = async function(req, res){
-  console.log("CRON JOB")
-  output = fn.getCard()
-  await mailer.sendMail(output, process.env.TO_EMAIL);
-  res.end()
-}
 
 module.exports = app;
