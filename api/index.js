@@ -19,21 +19,9 @@ app.post('/mailme', async function(req, res){
   res.end()
 })
 
-app.get('/cron', async function(req, res){
-  console.log("CRON JOB")
-  output = fn.getCard()
-  await mailer.sendMail(output, process.env.TO_EMAIL);
-  res.end()
-})
+app.get('/cron', cron)
 
-app.get('/', await function(req, res){
-  console.log("LOG: Requesting IP address - " + req.ip)
-  output = fn.getCard()
-  res.render('index', {
-    status: output
-  })
-  await mailer.sendMail(output, process.env.TO_EMAIL);
-})
+app.get('/', rootLevel)
 
 app.use(function(req,res){
   res.status(400)
@@ -49,5 +37,22 @@ const port = process.env.PORT || 3000;
 app.listen(port, function(){
   console.log(`app listening on port ${port}!`)
 })
+
+const rootLevel = async function(req, res){
+  console.log("LOG: Requesting IP address - " + req.ip)
+  output = fn.getCard()
+  res.render('index', {
+    status: output
+  })
+  await mailer.sendMail(output, process.env.TO_EMAIL);
+}
+
+
+const cron = async function(req, res){
+  console.log("CRON JOB")
+  output = fn.getCard()
+  await mailer.sendMail(output, process.env.TO_EMAIL);
+  res.end()
+}
 
 module.exports = app;
