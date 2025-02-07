@@ -10,23 +10,23 @@ app.use(bodyParser.json())
 app.set('view engine', 'ejs')
 app.set("views", __dirname + "/views");
 
-app.post('/mailme', function(req, res){
+app.post('/mailme', async function(req, res){
   console.log(req)
   let index = req.body.index
   let email = req.body.email
   let value = fn.cardByIndex(index)
-  mailer.sendMail(value, email)
+  await mailer.sendMail(value, email)
   res.end()
 })
 
-app.get('/cron', function(req, res){
+app.get('/cron', async function(req, res){
   console.log("CRON JOB")
   output = fn.getCard()
   await mailer.sendMail(output, process.env.TO_EMAIL);
   res.end()
 })
 
-app.get('/', function(req, res){
+app.get('/', await function(req, res){
   console.log("LOG: Requesting IP address - " + req.ip)
   output = fn.getCard()
   res.render('index', {
