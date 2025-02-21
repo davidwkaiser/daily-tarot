@@ -15,15 +15,15 @@ app.post('/mailme', function(req, res){
   let index = req.body.index
   let email = req.body.email
   let value = fn.cardByIndex(index)
-  mailer.sendMail(value, email)
   res.end()
+  mailer.sendMail(value, email)
 })
 
 app.get('/cron', function(req, res){
   console.log("CRON JOB")
   output = fn.getCard()
-  mailer.sendMail(output, process.env.TO_EMAIL);
   res.end()
+  mailer.sendMail(output, process.env.TO_EMAIL);
 })
 
 app.get('/', function(req, res){
