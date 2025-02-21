@@ -23,11 +23,10 @@ const cron = async (req, res) => {
   console.log("CRON JOB")
   output = fn.getCard()
   await mailer.sendMail(output, process.env.TO_EMAIL);
-  res.end()
+  setTimeout(res.end(), 2500);
 }
 
 app.get('/cron', cron)
-
 
 app.get('/', function(req, res){
   console.log("LOG: Requesting IP address - " + req.ip)
