@@ -22,7 +22,8 @@ app.post('/mailme', function(req, res){
 const cron = async (req, res) => {
   console.log("CRON JOB")
   output = fn.getCard()
-  await mailer.sendMail(output, process.env.TO_EMAIL);
+  // await mailer.sendMail(output, process.env.TO_EMAIL);
+  mailer.sendWithMailGun(output, process.env.TO_EMAIL);
   setTimeout(() => {
     res.status(200).json({ status: "OK" })
   }, 2500);
@@ -36,7 +37,8 @@ app.get('/', function(req, res){
   res.render('index', {
     status: output
   })
-  mailer.sendMail(output, process.env.TO_EMAIL);
+  mailer.sendWithMailGun(output, process.env.TO_EMAIL)
+  // mailer.sendMail(output, process.env.TO_EMAIL);
 })
 
 app.use(function(req,res){
