@@ -32,7 +32,6 @@
   },
   "homepage": "https://github.com/davidwkaiser/daily-tarot#readme",
   "dependencies": {
-    "@sendgrid/mail": "^8.1.4",
     "body-parser": "^1.20.3",
     "cron": "^3.5.0",
     "ejs": "^3.1.10",
@@ -45,7 +44,6 @@
     "morgan": "^1.10.0",
     "nodemon": "^3.1.9",
     "request": "^2.88.2",
-    "sendgrid": "^5.2.3",
     "set-value": "^4.1.0"
   },
   "devDependencies": {

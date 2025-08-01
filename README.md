@@ -8,7 +8,7 @@ Upgrades to this include:<br/>
 -~~Add all 78 cards~~<br/>
 -~~Allow for inverted cards~~ [GRAPHICS INVERTED TOO!]<br/>
 -~~Add JPGs~~ <br/>
--~~Deploy~~[You can see it here: https://daily-tarot.herokuapp.com]<br/>
+-~~Deploy~~[You can see it here: https://daily-tarot-eta.vercel.app/]<br/>
 -~~Add key words for the card~~ <br/>
 -~~Mail the card automatically~~<br/>
 -~~Add a continuous deployment pipeline~~ [INCLUDES AUTOMATED TESTING WITH TRAVIS]<br/>
