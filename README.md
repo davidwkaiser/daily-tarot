@@ -18,8 +18,8 @@ Upgrades to this include:<br/>
 -~~Add a form so you can input your email address, then mail it!~~<br/>
 -~~Change email handling to a post~~<br/>
 -~~Validate email input~~<br/>
--Update Heroku Stack<br/>
--Add Sender Authentication in SendGrid<br/>
+-Get a domain, wire up real email service with MailGun
+-Add Sender Authentication<br/>
 -Add tests [IN PROGRESS, ADDITIONAL TESTS RECENTLY ADDED]<br/>
 -Mail via formatted HTML email<br/>
 -Make it pretty / add styling [IN PROGRESS]<br/>
@@ -37,10 +37,12 @@ To monetize:<br/>
 -Add Google ads<br/>
 -Add Google ads to email as well<br/>
 -Add a DB<br/>
--Restore the cron<br/>
+-~~Restore the cron~~<br/>
 -Add an about page<br/>
 
-Tech stack: Node.JS, Express, Nodemon, EJS, Jasmine, Heroku, Travis<br/>
+Tech stack: Node.JS, Express, Nodemon, EJS, Jasmine, Vercel<br/>
 
 See my LinkedIn at http://linkedin.com/in/davidwkaiser<br/>
+
+You can see this app deployed here: https://daily-tarot-eta.vercel.app/
 
